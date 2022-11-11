@@ -1,4 +1,5 @@
 import "./index.css";
+
 import logo from "../../images/logo.png";
 
 function Logo() {

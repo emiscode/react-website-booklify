@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  display: flex;
+  height: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  min-width: 120px;
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
