@@ -1,5 +1,7 @@
 import Input from "../Input";
 import styled from "styled-components";
+import { useState } from "react";
+import { books } from "../../data/books";
 
 const SearchContainer = styled.section`
   color: #fff;
@@ -23,11 +25,33 @@ const SubTitle = styled.h3`
 `;
 
 function Search() {
+  const [searchBooks, setSearchBooks] = useState([]);
+
   return (
     <SearchContainer>
       <Title>A home for your books.</Title>
       <SubTitle>Find your next favorite reading!</SubTitle>
-      <Input placeholder="What do you want to read?" />
+      <Input
+        placeholder="What do you want to read?"
+        onChange={(event) => {
+          const MIN_SEARCH_SIZE = 3;
+          const inputData = event.target.value;
+
+          const searchResult = books.filter(
+            (book) =>
+              inputData &&
+              inputData.length >= MIN_SEARCH_SIZE &&
+              book.title.toLowerCase().includes(inputData.toLowerCase())
+          );
+
+          setSearchBooks(searchResult);
+        }}
+      />
+      <div>
+        {searchBooks.map((result) => (
+          <p key={result.id}>{result.title}</p>
+        ))}
+      </div>
     </SearchContainer>
   );
 }
