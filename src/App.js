@@ -1,22 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Logo from "./components/Logo";
+import profiler from "./images/profiler.png";
+import cart from "./images/cart.png";
+
+const optionsData = ["Home", "My Books", "Browse", "Community", "About"];
+const iconsData = [profiler, cart];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app-header">
+        <Logo />
+
+        <ul className="options">
+          {optionsData.map((option) => (
+            <li className="options-item">
+              <span>{option}</span>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="icons">
+          {iconsData.map((icon) => (
+            <li className="icons-item">
+              <img src={icon} alt=""></img>
+            </li>
+          ))}
+        </ul>
       </header>
     </div>
   );
