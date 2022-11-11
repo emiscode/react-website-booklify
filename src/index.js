@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
+import Search from "./components/Search";
 import styled, { createGlobalStyle } from "styled-components";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,6 +32,7 @@ const App = () => {
   return (
     <AppContainer>
       <Header />
+      <Search />
     </AppContainer>
   );
 };
