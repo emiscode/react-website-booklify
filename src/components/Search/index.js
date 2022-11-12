@@ -1,3 +1,5 @@
+import "./index.css";
+
 import Input from "../Input";
 import styled from "styled-components";
 import { useState } from "react";
@@ -24,6 +26,27 @@ const SubTitle = styled.h3`
   margin-bottom: 40px;
 `;
 
+const Library = styled.div`
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+`;
+
+const Book = styled.div`
+  width: 18rem;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #6c6c00;
+
+  &:hover {
+    border-top: 5px solid #331a00;
+    border-left: 2px solid #331a00;
+    border-right: 2px solid #331a00;
+    border-bottom: 2px solid #331a00;
+  }
+`;
+
 function Search() {
   const [searchBooks, setSearchBooks] = useState([]);
 
@@ -47,11 +70,25 @@ function Search() {
           setSearchBooks(searchResult);
         }}
       />
-      <div>
+      <Library>
         {searchBooks.map((result) => (
-          <p key={result.id}>{result.title}</p>
+          <Book key={result.id}>
+            <img src={result.image} alt="" style={{ width: "200px" }} />
+            <div>
+              <p
+                style={{
+                  textTransform: "uppercase",
+                  color: "#331a00",
+                  fontWeight: "bold",
+                }}
+              >
+                {result.title}
+              </p>
+              <p style={{ textAlign: "justify" }}>{result.description}</p>
+            </div>
+          </Book>
         ))}
-      </div>
+      </Library>
     </SearchContainer>
   );
 }
