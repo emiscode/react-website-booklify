@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import styled, { createGlobalStyle } from "styled-components";
+import NewReleases from "./components/NewReleases";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,6 +34,7 @@ const App = () => {
     <AppContainer>
       <Header />
       <Search />
+      <NewReleases />
     </AppContainer>
   );
 };
