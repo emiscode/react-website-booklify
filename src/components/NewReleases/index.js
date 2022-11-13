@@ -1,5 +1,6 @@
 import { books } from "../../data/newReleases";
 import styled from "styled-components";
+import { Title } from "../Title";
 
 const NewReleasesContainer = styled.section`
   color: #fff;
@@ -8,15 +9,6 @@ const NewReleasesContainer = styled.section`
   margin-top: 1rem;
   border: 2px solid ridge;
   background: #fbeee6;
-`;
-
-const Title = styled.h2`
-  color: #592d00;
-  font-size: 2.5rem;
-  text-align: center;
-  width: 100%;
-  background: white;
-  padding: 3rem;
 `;
 
 const Library = styled.div`
@@ -42,7 +34,13 @@ const Book = styled.div`
 function NewReleases() {
   return (
     <NewReleasesContainer>
-      <Title>New Releases</Title>
+      <Title
+        customColor="#592d00"
+        customFontSize="2.5rem"
+        customBackground="white"
+      >
+        New Releases
+      </Title>
       <Library>
         {books.map((book) => (
           <Book key={book.id}>
