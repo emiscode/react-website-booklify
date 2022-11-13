@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 
 const AppContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 50rem;
   background-image: linear-gradient(90deg, #00876e 35%, #03bf9a);
 `;
 

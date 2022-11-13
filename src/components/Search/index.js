@@ -9,7 +9,7 @@ const SearchContainer = styled.section`
   color: #fff;
   text-align: center;
   padding: 85px 0;
-  height: 270px;
+  height: auto;
   width: 100%;
 `;
 
@@ -37,13 +37,13 @@ const Book = styled.div`
   height: auto;
   padding: 20px;
   margin: 20px;
-  border: 2px solid #6c6c00;
+  border: 3px solid #006653;
 
   &:hover {
-    border-top: 5px solid #331a00;
-    border-left: 2px solid #331a00;
-    border-right: 2px solid #331a00;
-    border-bottom: 2px solid #331a00;
+    border-top: 6px solid #592d00;
+    border-left: 3px solid #592d00;
+    border-right: 3px solid #592d00;
+    border-bottom: 3px solid #592d00;
   }
 `;
 
@@ -78,13 +78,18 @@ function Search() {
               <p
                 style={{
                   textTransform: "uppercase",
-                  color: "#331a00",
+                  color: "#592d00",
                   fontWeight: "bold",
+                  background: "#fbeee6",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
                 }}
               >
                 {result.title}
               </p>
-              <p style={{ textAlign: "justify" }}>{result.description}</p>
+              <p style={{ textAlign: "justify", lineHeight: "1.5" }}>
+                {result.description}
+              </p>
             </div>
           </Book>
         ))}
