@@ -9,6 +9,8 @@ export const books = [
     description:
       "Harry Potter thinks he is an ordinary boy - until he is rescued by an owl, taken to Hogwarts School of Witchcraft and Wizardry, learns to play Quidditch and does battle in a deadly duel.",
     image: newelease1,
+    stars: 4.62,
+    reviews: 8.871,
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const books = [
     description:
       "Harry has been burdened with a dark, dangerous and seemingly impossible task: that of locating and destroying Voldemort's remaining Horcruxes. Never has Harry felt so alone, or faced a future so full of shadows.",
     image: newelease2,
+    stars: 4.58,
+    reviews: 3.345,
   },
   {
     id: 3,
@@ -23,5 +27,7 @@ export const books = [
     description:
       "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry.",
     image: newelease3,
+    stars: 4.47,
+    reviews: 3.616,
   },
 ];

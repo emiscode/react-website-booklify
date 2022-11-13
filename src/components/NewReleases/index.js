@@ -1,6 +1,7 @@
 import { books } from "../../data/newReleases";
 import styled from "styled-components";
 import { Title } from "../Title";
+import CardRecomendation from "../CardRecomendation";
 
 const NewReleasesContainer = styled.section`
   color: #fff;
@@ -56,6 +57,7 @@ function NewReleases() {
                 {book.title}
               </p>
             </div>
+            <CardRecomendation stars={book.stars} reviews={book.reviews} />
           </Book>
         ))}
       </Library>
